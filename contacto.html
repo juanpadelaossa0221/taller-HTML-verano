@@ -19,11 +19,24 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-        <main>
+        <main class="form">
             <section>
-                <h2>Contacto</h2>
-                <p>Email: <a href="mailto:juandelaossau@gmail.com">Send Mail</a></p>
-                <p>Linkedln: <a href="target="_blank"></a></p>
+                <h1 class="form__title">Formulario de Contacto</h1>
+                <form class="form__container" novalidate>
+                    <div class="form__group">
+                        <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Ingrese su nombre" required minlength="3">
+                        <label for="nombre" class="form__label">Nombre</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" id="correo" name="correo" class="form__input" placeholder="Ingrese su correo" required>
+                        <label for="correo" class="form__label">Correo</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="password" id="clave" name="clave" class="form__input" placeholder="Ingrese su contraseña" required minlength="6">
+                        <label for="clave" class="form__label">Contraseña</label>
+                    </div>
+                    <button type="submit" class="form__button">Enviar</button>
+                </form>
             </section>
         </main>
     </body>
