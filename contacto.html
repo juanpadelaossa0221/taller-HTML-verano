@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- nombre de la pestaña -->
-        <title>Document</title> 
-    </head>
-    <body>
-        <header>
-            <h1>Juan Pablo De La Ossa Usuga</h1>
-            <p>Ingeniero de Datos</p>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="./index.html">Sobre Mi</a></li>
-                <li><a href="./proyectos.html">Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-        <main class="form">
-            <section>
-                <h1 class="form__title">Formulario de Contacto</h1>
-                <form class="form__container" novalidate>
-                    <div class="form__group">
-                        <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Ingrese su nombre" required minlength="3">
-                        <label for="nombre" class="form__label">Nombre</label>
-                    </div>
-                    <div class="form__group">
-                        <input type="email" id="correo" name="correo" class="form__input" placeholder="Ingrese su correo" required>
-                        <label for="correo" class="form__label">Correo</label>
-                    </div>
-                    <div class="form__group">
-                        <input type="password" id="clave" name="clave" class="form__input" placeholder="Ingrese su contraseña" required minlength="6">
-                        <label for="clave" class="form__label">Contraseña</label>
-                    </div>
-                    <button type="submit" class="form__button">Enviar</button>
-                </form>
-            </section>
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Portafolio</title>
+  <link rel="stylesheet" href="./contacto.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="nombre">Juan Pablo De La Ossa Usuga</h1>
+    <p class="titulo">Ingeniero de Datos</p>
+  </header>
+
+  <nav class="navegacion">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="./index.html">Sobre mí</a></li>
+      <li><a class="nav-link" href="./proyectos.html">Proyectos</a></li>
+      <li><a class="nav-link activo" href="./contacto.html">Contacto</a></li>
+      <li><a class="nav-link" href="./certificaciones.html">Certificaciones</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="seccion form-seccion">
+      <h2 class="form__title">Formulario de Contacto</h2>
+      <form class="form__container" novalidate>
+        <div class="form__group">
+          <input type="text" id="nombre" name="nombre" class="form__input" placeholder=" " required minlength="3">
+          <label for="nombre" class="form__label">Nombre</label>
+        </div>
+        <div class="form__group">
+          <input type="email" id="correo" name="correo" class="form__input" placeholder=" " required>
+          <label for="correo" class="form__label">Correo</label>
+        </div>
+        <div class="form__group">
+          <input type="password" id="clave" name="clave" class="form__input" placeholder=" " required minlength="6">
+          <label for="clave" class="form__label">Contraseña</label>
+        </div>
+        <button type="submit" class="form__button">Enviar</button>
+      </form>
+    </section>
+  </main>
+</body>
 </html>

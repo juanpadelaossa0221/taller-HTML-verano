@@ -1,64 +1,144 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+/* Tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --color-primario: #333;
+    --color-secundario: #0051d4;
+    --color-fondo: #f9f9f9;
+    --color-texto: #333;
+    --color-nav: #1e1e2f;
+    --color-blanco: #fff;
+    --borde-radio: 10px;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transicion: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
-.header{
-    background-color: #0036a0;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.nombre{
-    margin: 0;
-    font-size: 2em;
-}
-
-.titulo{
-    margin: 5px 0 0;
-    font-size: 1.2em;
-}
-
-.navegacion{
-    background-color: #222;
-    padding: 10px;
-    text-align: center;
-}
-
-.nav-list{
-    list-style: none;
-
-}
-
-.nav-link{
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.nav-link:hover{
-    text-decoration: underline;
-}
-
-.seccion{
-    padding: 30px;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.seccion-titulo{
-    color: #0033a0;
-
-}
-
-.seccion-texto{
-    font-size: 1em;
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     line-height: 1.6;
 }
+
+/* CABECERA */
+.header {
+    background: linear-gradient(to right, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.nombre {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+.titulo {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* NAVEGACIÓN */
+.navegacion {
+    background-color: var(--color-nav);
+    box-shadow: var(--sombra);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.nav-link {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: var(--borde-radio);
+    transition: background-color var(--transicion), transform var(--transicion);
+}
+
+.nav-link:hover,
+.nav-link.activo {
+    background-color: var(--color-secundario);
+    transform: scale(1.05);
+}
+
+/* CONTENIDO */
+main {
+    padding: 40px 20px;
+}
+
+.seccion {
+    background-color: var(--color-blanco);
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: var(--borde-radio);
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.seccion-titulo {
+    font-size: 1.8em;
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.seccion-texto {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.foto-perfil-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05);
+}
+

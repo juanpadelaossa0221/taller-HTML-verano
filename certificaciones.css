@@ -29,20 +29,39 @@ body {
 .header {
   background: linear-gradient(to right, var(--color-primario), var(--color-secundario));
   color: var(--color-blanco);
-  padding: 30px 20px;
+  padding: 30px 20px 10px;
   text-align: center;
   box-shadow: var(--sombra);
 }
 
-.nombre {
-  margin: 0;
-  font-size: 2.8em;
-  font-weight: 700;
-  letter-spacing: 1px;
+.header-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
 }
 
+.foto-perfil {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-texto {
+  text-align: left;
+}
+
+.nombre {
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
 .titulo {
-  margin: 5px 0 0;
   font-size: 1.2em;
   font-weight: 400;
 }
@@ -60,7 +79,6 @@ body {
   gap: 30px;
   list-style: none;
   padding: 15px 0;
-  margin: 0;
 }
 
 .nav-link {
@@ -90,9 +108,6 @@ main {
   padding: 40px;
   border-radius: var(--borde-radio);
   box-shadow: var(--sombra);
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
   animation: fadeIn 0.6s ease-in;
 }
 
@@ -100,52 +115,36 @@ main {
   font-size: 1.8em;
   color: var(--color-primario);
   border-bottom: 2px solid var(--color-secundario);
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* PROYECTOS */
-.contenedor-proyectos {
+/* TARJETAS */
+.certificaciones-grid {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.proyecto {
-  background-color: #f1f5ff;
-  padding: 20px;
-  border-left: 5px solid var(--color-secundario);
+.cert-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
   border-radius: var(--borde-radio);
   box-shadow: var(--sombra);
-  transition: transform var(--transicion);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.proyecto:hover {
+.cert-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.proyecto-titulo {
-  font-size: 1.4em;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 8px;
+.cert-titulo {
+  font-size: 1.1em;
+  color: var(--color-primario);
+  text-align: center;
 }
-
-.proyecto-descripcion {
-  font-size: 1em;
-  color: #444;
-  margin: 0;
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-

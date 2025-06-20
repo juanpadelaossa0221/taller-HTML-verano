@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- nombre de la pestaña -->
-        <title>Document</title> 
-        <link rel="stylesheet" href="./proyectos.css">
-    </head>
-    <body>
-        <header class="header">
-            <h1 class="nombre">Juan Pablo De La Ossa Usuga</h1>
-            <p class="titulo">Ingeniero de Datos</p>
-        </header>
-        
-        <nav class="navegacion">
-            <ul class = "nav-list">
-                <li ><a class = "nav-link" href="#">Sobre Mi</a></li>
-                <li ><a class = "nav-link" href="./proyectos.html">Proyectos</a></li>
-                <li ><a class = "nav-link" href="./contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section class="seccion">
-                <h2 class="seccion-titulo">Proyectos</h2>
-                <div class="proyecto">
-                    <h3 class="proyecto-titulo">Gestor de tareas</h3>
-                    <p class="proyecto-descripcion">Aplicacion web para la gestion de tareas</p>
-                </div>
-                <div>
-                    <h3>analisis de audios</h3>
-                    <p>uso de mineria de datos NS</p>
-                </div>
-                <div>
-                    <h3>Dashboard para Banco</h3>
-                    <p>modelo de datos para banco</p>
-                </div>
-            </section>
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos | Portafolio</title>
+  <link rel="stylesheet" href="./proyectos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="nombre">Juan Pablo De La Ossa Usuga</h1>
+    <p class="titulo">Ingeniero de Datos</p>
+  </header>
+
+  <nav class="navegacion">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="./index.html">Sobre mí</a></li>
+      <li><a class="nav-link activo" href="./proyectos.html">Proyectos</a></li>
+      <li><a class="nav-link" href="./contacto.html">Contacto</a></li>
+      <li><a class="nav-link" href="./certificaciones.html">Certificaciones</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="seccion">
+      <h2 class="seccion-titulo">Proyectos</h2>
+
+      <div class="contenedor-proyectos">
+        <article class="proyecto">
+          <h3 class="proyecto-titulo">Gestor de Tareas</h3>
+          <p class="proyecto-descripcion">
+            Aplicación web para la gestión eficiente de tareas personales y de equipo.
+          </p>
+        </article>
+
+        <article class="proyecto">
+          <h3 class="proyecto-titulo">Análisis de Audios</h3>
+          <p class="proyecto-descripcion">
+            Proyecto de minería de datos para extracción de patrones acústicos y categorización.
+          </p>
+        </article>
+
+        <article class="proyecto">
+          <h3 class="proyecto-titulo">Dashboard para Banco</h3>
+          <p class="proyecto-descripcion">
+            Diseño de modelo de datos y visualización financiera en Power BI.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
